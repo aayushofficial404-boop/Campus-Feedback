@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Public View Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Campus Public View Portal</h1>
+            <p class="subtitle">Live Updates & Announcements</p>
+        </div>
+        <div class="refresh-info">
+            <span id="lastUpdate">Last updated: --:--</span>
+            <span class="update-indicator" id="updateIndicator">●</span>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Filters Section -->
+        <section class="filters-section">
+            <div class="filters-container">
+                <!-- Issue Type Filter -->
+                <div class="filter-group">
+                    <label for="issueTypeFilter">Issue Type:</label>
+                    <select id="issueTypeFilter">
+                        <option value="">All Types</option>
+                        <option value="Academic">Academic</option>
+                        <option value="Hostel">Hostel</option>
+                        <option value="Exam">Exam</option>
+                        <option value="Event">Event</option>
+                        <option value="Maintenance">Maintenance</option>
+                    </select>
+                </div>
+
+                <!-- Priority Filter -->
+                <div class="filter-group">
+                    <label for="priorityFilter">Priority:</label>
+                    <select id="priorityFilter">
+                        <option value="">All Priorities</option>
+                        <option value="Critical">Critical</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+
+                <!-- Status Filter -->
+                <div class="filter-group">
+                    <label for="statusFilter">Status:</label>
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="Open">Open</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Resolved">Resolved</option>
+                    </select>
+                </div>
+
+                <!-- Clear Filters Button -->
+                <button id="clearFiltersBtn" class="clear-filters-btn">Clear Filters</button>
+            </div>
+        </section>
+
+        <!-- Status Message -->
+        <div id="statusMessage" class="status-message" style="display: none;"></div>
+
+        <!-- Updates Grid -->
+        <section class="updates-grid" id="updatesGrid">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading campus updates...</p>
+            </div>
+        </section>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Campus Portal. Updates refresh every 30 seconds.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
